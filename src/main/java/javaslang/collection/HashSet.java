@@ -19,7 +19,7 @@ import java.util.stream.Collector;
  * @since 2.0.0
  */
 public final class HashSet<T> implements Set<T>, Serializable {
-  public static long serialVersionUID=1L;
+  public static final long serialVersionUID=1L;
   public static HashSet<?> EMPTY=new HashSet<>(HashArrayMappedTrie.empty());
   public HashArrayMappedTrie<T,T> tree;
   public transient Lazy<Integer> hash;
@@ -627,7 +627,7 @@ public final class HashSet<T> implements Set<T>, Serializable {
  * @param < T > The component type of the underlying list.
  */
 public static final class SerializationProxy<T> implements Serializable {
-    public static long serialVersionUID=1L;
+    public static final long serialVersionUID=1L;
     public transient HashArrayMappedTrie<T,T> tree;
     /** 
  * Constructor for the case of serialization, called by  {@link HashSet#writeReplace()}. <p/> The constructor of a SerializationProxy takes an argument that concisely represents the logical state of an instance of the enclosing class.
