@@ -20,7 +20,7 @@ import java.util.stream.Collector;
  * @since 2.0.0
  */
 public final class CharSeq implements CharSequence, IndexedSeq<Character>, Serializable {
-  public static long serialVersionUID=1L;
+  public static final long serialVersionUID=1L;
   public static CharSeq EMPTY=new CharSeq("");
   public String back;
   public CharSeq(  String javaString){
