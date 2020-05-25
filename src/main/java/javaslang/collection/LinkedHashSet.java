@@ -18,7 +18,7 @@ import java.util.stream.Collector;
  * @since 2.0.0
  */
 public final class LinkedHashSet<T> implements Set<T>, Serializable {
-  public static long serialVersionUID=1L;
+  public static final long serialVersionUID=1L;
   public static LinkedHashSet<?> EMPTY=new LinkedHashSet<>(LinkedHashMap.empty());
   public LinkedHashMap<T,T> map;
   public LinkedHashSet(  LinkedHashMap<T,T> map){
@@ -643,7 +643,7 @@ public final class LinkedHashSet<T> implements Set<T>, Serializable {
  * @param < T > The component type of the underlying list.
  */
 public static final class SerializationProxy<T> implements Serializable {
-    public static long serialVersionUID=1L;
+    public static final long serialVersionUID=1L;
     public transient LinkedHashMap<T,T> map;
     /** 
  * Constructor for the case of serialization, called by  {@link LinkedHashSet#writeReplace()}. <p/> The constructor of a SerializationProxy takes an argument that concisely represents the logical state of an instance of the enclosing class.
